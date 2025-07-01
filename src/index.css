@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:border-gray-300;
+  }
+  
+  .btn-primary {
+    @apply bg-ude-blue text-white px-4 py-2 rounded-lg font-medium transition-colors hover:bg-ude-lightblue focus:outline-none focus:ring-2 focus:ring-ude-blue focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium transition-colors hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .bottom-nav-item {
+    @apply flex flex-col items-center justify-center py-2 px-1 text-xs transition-colors;
+  }
+  
+  .bottom-nav-item.active {
+    @apply text-ude-blue;
+  }
+  
+  .bottom-nav-item.inactive {
+    @apply text-gray-500 hover:text-gray-700;
+  }
+}
